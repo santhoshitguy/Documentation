@@ -4,42 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Anglar Admin Template Documentation</title>
 </head>
 <body>
-    <h1>Skeleton</h1>
-    <h2>1. Remove the Demo Pages</h2>
-    <ol>
-        <li>Remove Demo pages folder
-            <div>
-                <p>[anglar]/src/app/routes/apps</p>
-                <p>[anglar]/src/app/routes/blog</p>
-                <p>[anglar]/src/app/routes/charts</p>
-                <p>[anglar]/src/app/routes/dashboard</p>
-                <p>[anglar]/src/app/routes/ecommerce</p>
-                <p>[anglar]/src/app/routes/elements</p>
-                <p>[anglar]/src/app/routes/events</p>
-                <p>[anglar]/src/app/routes/forms</p>
-                <p>[anglar]/src/app/routes/gallery</p>
-                <p>[anglar]/src/app/routes/maps</p>
-                <p>[anglar]/src/app/routes/metrics</p>
-                <p>[anglar]/src/app/routes/miscellaneous</p>
-                <p>[anglar]/src/app/routes/ngrx</p>
-                <p>[anglar]/src/app/routes/pipes</p>
-                <p>[anglar]/src/app/routes/tables</p>
-                <p>[anglar]/src/app/routes/views</p>
-                <p>[anglar]/src/app/routes/widgets</p>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="index.html">Overview</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="skeleton.html">Skeleton</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="installation.html">Installation</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="usage.html">Usage</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="mock-backend.html">Fake Backend</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="build.html">Build</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="deployment.html">Deployment</a>
             </div>
-            <blockquote>Leave shared and pages folder, also leave the core, layout folders. Auth is required for authentication module like login and register page. pages is required for 404 page redirect (* you able to keep only error page and remove others). core/translator is required for application localization.</blockquote>
-        </li>
-        <li>
-            <p>Remove other pages from Routing in file and exclude the home module</p>
-        </li>
-        <li>
-            <p>Remove remaining modules menu in the following <code>[anglar]/src/app/routes/menu.ts</code> and find the constant sideMenuList then comment or delete all routes except the home module.</p>
-            <p><img src="./assets/img/skeleton_1.jpg" alt="Skeleton" /></p>
-        </li>
-    </ol>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#!">Action</a>
+                                    <a class="dropdown-item" href="#!">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-12 col-md-12 col-sm-12">
+                        <h1>Skeleton</h1>
+                        <h2>1. Remove the Demo Pages</h2>
+                        <ol>
+                            <li>Remove Demo pages folder
+                                <div>
+                                    <p>[anglar]/src/app/routes/apps</p>
+                                    <p>[anglar]/src/app/routes/blog</p>
+                                    <p>[anglar]/src/app/routes/charts</p>
+                                    <p>[anglar]/src/app/routes/dashboard</p>
+                                    <p>[anglar]/src/app/routes/ecommerce</p>
+                                    <p>[anglar]/src/app/routes/elements</p>
+                                    <p>[anglar]/src/app/routes/events</p>
+                                    <p>[anglar]/src/app/routes/forms</p>
+                                    <p>[anglar]/src/app/routes/gallery</p>
+                                    <p>[anglar]/src/app/routes/maps</p>
+                                    <p>[anglar]/src/app/routes/metrics</p>
+                                    <p>[anglar]/src/app/routes/miscellaneous</p>
+                                    <p>[anglar]/src/app/routes/ngrx</p>
+                                    <p>[anglar]/src/app/routes/pipes</p>
+                                    <p>[anglar]/src/app/routes/tables</p>
+                                    <p>[anglar]/src/app/routes/views</p>
+                                    <p>[anglar]/src/app/routes/widgets</p>
+                                </div>
+                                <blockquote>Leave shared and pages folder, also leave the core, layout folders. Auth is required for authentication module like login and register page. pages is required for 404 page redirect (* you able to keep only error page and remove others). core/translator is required for application localization.</blockquote>
+                            </li>
+                            <li>
+                                <p>Remove other pages from Routing in file and exclude the home module</p>
+                            </li>
+                            <li>
+                                <p>Remove remaining modules menu in the following <code>[anglar]/src/app/routes/menu.ts</code> and find the constant sideMenuList then comment or delete all routes except the home module.</p>
+                                <p><img src="./assets/img/skeleton_1.jpg" alt="Skeleton" /></p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 

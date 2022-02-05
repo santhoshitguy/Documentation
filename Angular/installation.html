@@ -4,38 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Anglar Admin Template Documentation</title>
 </head>
 <body>
-    <h1>Installation</h1>
-    <h3>Setup the development environment</h3>
-    <ol>
-        <li>Install Node and npm latest version if they are not available in your machine.</li>
-        <li>Angular CLI is the tool for latest angular application setup. Install it before start to setup the application.</li>
-        <li>Check the node and npm version using following command: <code>node --version && npm --version</code>
-            <div>
-                <p>If the local machine has Angular CLI already, then we need to update the version to confirm the application is running without any hassels.</p>
-                <p><code>npm uninstall --global @angular/cli</code></p>
-                <p><code>npm install --global @angular/cli@latest</code></p>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="index.html">Overview</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="skeleton.html">Skeleton</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="installation.html">Installation</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="usage.html">Usage</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="mock-backend.html">Fake Backend</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="build.html">Build</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="deployment.html">Deployment</a>
             </div>
-        </li>
-    </ol>
-    <h3>Angular Quickstart</h3>
-    <ol>
-        <li>To start and run the theme, change the directory to <code>[anglar]/anglar/</code></li>
-        <li><p>Install the angular dependencies by using the following commands.</p>
-            <ul>
-                <li><code>npm clear cache --force</code> - This will remove the old cache of any node-modules in the same folder</li>
-                <li><code>npm install</code> - This command installs all the dependencies in the node_modules folder based on the lists in the package.json file. By default, npm install will install all modules listed as dependencies in package.json.</li>
-                <li><code>ng serve or npm start</code> - This will starts compilation and launch the application in the default port of local machine as open it in the browser after compilation completes.</li>
-            </ul>
-        </li>
-    </ol>
-    <p>For more detailed information to install the Angular application, visit this official Angular documentation website.</p>
-    <h3>Polyfills</h3>
-    <p>Angualr is built and compile on the latest web standard and technologies. It supports mostly all kind of browsers available but not all the funcitionalities. Every browser need atleast a single polyfills to run the application.</p>
-    <p>To support Angular in IE, open this file <code>[anglar]/anglar/src/polyfills.ts</code> Uncomment all the imports under Browser Polyfills list and classlist.js</p>
-    <p>To read more about the polyfills, please click here. <a href="https://angular.io/guide/browser-support" target="_blank">https://angular.io/guide/browser-support</a></p>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#!">Action</a>
+                                    <a class="dropdown-item" href="#!">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-12 col-md-12 col-sm-12">
+                        <h1>Installation</h1>
+                        <h3>Setup the development environment</h3>
+                        <ol>
+                            <li>Install Node and npm latest version if they are not available in your machine.</li>
+                            <li>Angular CLI is the tool for latest angular application setup. Install it before start to setup the application.</li>
+                            <li>Check the node and npm version using following command: <code>node --version && npm --version</code>
+                                <div>
+                                    <p>If the local machine has Angular CLI already, then we need to update the version to confirm the application is running without any hassels.</p>
+                                    <p><code>npm uninstall --global @angular/cli</code></p>
+                                    <p><code>npm install --global @angular/cli@latest</code></p>
+                                </div>
+                            </li>
+                        </ol>
+                        <h3>Angular Quickstart</h3>
+                        <ol>
+                            <li>To start and run the theme, change the directory to <code>[anglar]/anglar/</code></li>
+                            <li><p>Install the angular dependencies by using the following commands.</p>
+                                <ul>
+                                    <li><code>npm clear cache --force</code> - This will remove the old cache of any node-modules in the same folder</li>
+                                    <li><code>npm install</code> - This command installs all the dependencies in the node_modules folder based on the lists in the package.json file. By default, npm install will install all modules listed as dependencies in package.json.</li>
+                                    <li><code>ng serve or npm start</code> - This will starts compilation and launch the application in the default port of local machine as open it in the browser after compilation completes.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <p>For more detailed information to install the Angular application, visit this official Angular documentation website.</p>
+                        <h3>Polyfills</h3>
+                        <p>Angualr is built and compile on the latest web standard and technologies. It supports mostly all kind of browsers available but not all the funcitionalities. Every browser need atleast a single polyfills to run the application.</p>
+                        <p>To support Angular in IE, open this file <code>[anglar]/anglar/src/polyfills.ts</code> Uncomment all the imports under Browser Polyfills list and classlist.js</p>
+                        <p>To read more about the polyfills, please click here. <a href="https://angular.io/guide/browser-support" target="_blank">https://angular.io/guide/browser-support</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 
