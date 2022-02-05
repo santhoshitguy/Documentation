@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglar Admin Template Documentation</title>
+</head>
+<body>
+    <h1>Deployment</h1>
+    <div>
+        <h2>Angular for Production</h2>
+        <p>After completing the development, we need to deploy the application to the end user test. For that Angular cli have some inbuilt commands to generate the dist for deployment. The Ahead-of-Time(AOT) which helps to load pre-compiled templates on the page loading time. It'll catch all errors while compile, so we can increase the performance.</p>
+        <p>The AOT compilation, downloads pre-compiled version of the application. So the user can reach out to any page or perform any logic immediately without any delay.</p>
+        <blockquote>
+            <pre>
+                <code>ng build --prod</code>
+            </pre>
+        </blockquote>
+        <p>We need to copy the files into a server sub-domain, and need to attch the build flag, --base-href and add attribute <base href> appropriately. For example, if the index.html is on the server at /demo/demo1/index.html, set the base href to <base href="/demo/demo1/"> like this.</p>
+        <blockquote>
+            <pre>
+                <code><base href="/demo/demo1/"></code>
+            </pre>
+        </blockquote>
+        <p>Another way of setting the --base-href is using the build command</p>
+        <blockquote>
+            <pre>
+                <code>ng build --prod --base-href="/my/app/"</code>
+            </pre>
+        </blockquote>
+        <p>For more detailed information, visit this official Angular <a href="https://angular.io/guide/deployment">documentation website</a>.</p>
+    </div>
+    <div>
+        <h2>Ahead-of-time (AOT) vs just-in-time (JIT)</h2>
+        <p>Actually Angular has only one compiler. The major difference between these two approaches are timing and the set of tools used for it. Tha AOT is compiles once at the build time using set of libraries, and the other side the JIT is compiles every user reach out the particular page using another set of libraries. To enable the JIT compiler,</p>
+        <blockquote>
+            <pre>
+                <code>ng build --prod --aot=false</code>
+            </pre>
+        </blockquote>
+    </div>
+</body>
+</html>
+

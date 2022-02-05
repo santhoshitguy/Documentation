@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglar Admin Template Documentation</title>
+</head>
+<body>
+    <h1>Build Tools</h1>
+    <h2>Installing Tools</h2>
+    <ul>
+       <li>The following steps are required to setup and run the theme. If these steps are not enough then do some research on how to start and run a application.</li> 
+       <li>
+           <ul>
+               <li>First step we need to install the node and npm latest version. Go to <a href="https://nodejs.org/en/">Node JS</a></li>
+               <li>Download and install GIT for your platform from <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></li>
+               <li>To confirm node and npm installs correctly, run the following command. <code>node --version && npm --version</code></li>
+           </ul>
+       </li>
+       <li>After install the above tools
+           <ul>
+               <li>Navigate to the theme folder and then open the theme in any of your favorite editor.</li>
+               <li>Open the theme in Visual Studio code/terminal and run the following command <code>npm install -g @angular/cli</code> to install the angular command line interface and the application dependencies.</li>
+               <li>To run and compile the application in local machine use the <code>ng serve</code> or <code>npm start</code> command.</li>
+           </ul>
+       </li>
+       <li>If your machine has the latest node and npm, then open your browser and browse <code>http://localhost:4200</code></li>
+    </ul>
+    <h2>Building for Production</h2>
+    <div>
+        <p>After complete the development we need to deploy the application on the any server to make it available for end user access.</p>
+        <p>When we make final files, we need to ignore all sourcemaps and other chunk files as well. Run the following command to generate deployable build.</p>
+        <p><code>ng build --prod --aot</code> or <code>npm run build --prod --aot</code></p>
+        <p>When we use the flag "--aot" makes the compilation process too long because some internal functionalities. So please be patience when make the final AOT enabled build.</p>
+        <p>After the command completes without throws any error. It generates the folder 'dist' which ready to place in the server and can be accessible by the end users.</p>
+    </div>
+</body>
+</html>
+

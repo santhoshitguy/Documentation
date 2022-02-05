@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglar Admin Template Documentation</title>
+</head>
+<body>
+    <h1>Usage</h1>
+    <div>
+    <h2>Add new Components</h2>
+        <p>To efficiently use the theme, you can create a new component by using the following way.</p>
+        <ul>
+            <li>
+                <p>We can use the angular-cli command to create a new component.</p>
+                <p><code>ng g component [component-name] </code></p>
+            </li>
+            <li>
+                <p>The above command will create a new component in the src/app directory. If you want to add component to a particular module or folder we need to specifically give the path</p>
+                <p><code>ng g component app/routes/[component-name]</code></p>
+            </li>
+            <li>In the latest version of angular, the component will be imported by default in a corresponding module. You can check it manually, if it is not then we can add by ourself. Otherwise the component won't usable.</li>
+            <li>
+                <blockquote>
+                <pre>import { SomeComponent } from './name/name.component';
+                    @NgModule({
+                        imports: [ ... ],
+                        declarations: [
+                            SomeComponent
+                        ],
+                        exports: [
+                            SomeComponent
+                        ]
+                    })</pre>
+                </blockquote>
+            </li>
+            <li>The same type of commands can be used for create customized directives, modules, pipes and etc.</li>
+        </ul>
+    </div>
+    <div>
+    <h2>Adding new routes</h2>
+        <p>When we develop the application we need to create a new route to navigate to a specific page. Follow the below steps to make it easier,</p>
+        <ul>
+            
+            <li>
+                <p>If we create a new module and add it to the menu.ts then we've to update the same in <code>./src/app/routes/routes.ts</code>.</p>
+                <p>Add the following line in "children" array to declare the new route to angular router class.</p>
+            </li>
+            <li>
+                <blockquote>
+                    <pre>
+                        export const routes = [
+                            // Routes loaded with complete layout like header, sidebar and footer etc.
+                            {
+                                path: '',
+                                component: LayoutComponent,
+                                canActivate: [AuthGuard],
+                                children: [
+                                    { path: 'new-menu', loadChildren: () => import('./newMenu/newMenu.module').then(home => newMenu.NewMenuModule) }
+                                    ...
+                                ]
+                            },
+                            { 
+                                // Pages displayed without sidebar, header, etc.
+                                { path: 'path', component: SomeComponent },
+                                ...
+                            }
+                        ]
+                    </pre>
+                </blockquote>
+            </li>
+        </ul>
+    </div>
+    <div>
+    <h2>Menu</h2>
+        <ul>
+            <li>
+                <p>After create a new component or module as explained in the above block, now its time to add the route in the menu.</p>
+            </li>
+            <li>
+                <p>For that we've to open the menu.ts file in the following location</p>
+                <p><code>./src/app/routes/menu.ts</code></p>
+            </li>
+            <li>
+                <p>There we can find all the available menus which are currently displayed in the left side menu. We can create our own custom menu there as copy and paste menu block</p>
+                <blockquote>
+                    <pre>
+                        const NewMenu: MenuDetails = {
+                            text: 'NewMenu',
+                            link: '/new-menu',
+                            icon: 'icon-notebook',
+                            alert: '7',
+                            submenu: [
+                                {
+                                    text: 'View 1',
+                                    link: '/new-menu/view-1',
+                                    icon: 'fas fa-receipt'
+                                },
+                            ]
+                        };
+                    </pre>
+                </blockquote>
+            </li>
+        </ul>
+    </div>
+    <div>
+    <h2>Vendor Assets</h2>
+    <p>Vendor assets are nothing but the plugins which makes the development easy. We can download and install in our application to increase the efficiency of the development.</p>
+    <ul>
+        <li>
+            <p>By npm commands we can install and uninstall any vendor packages in our application.</p>
+            <p><code>npm install package-name --save</code></p>
+        </li>
+        <li>
+            <p>We have to add the --save flag to add it in package.json file or otherwise it'll be only in local machine and it is not install anyother machine while clone the same application or theme.</p>
+        </li>
+        <li>
+            <p>Once the command runs successfully then the particular package has been downloaded and installed in node_modules folder.</p>
+        </li>
+    </ul>
+    <h3>Global</h3>
+    <p>We can import the new package to the application in two ways like global and local</p>
+    <ul>
+        <li>
+            <p>To make the package available for the entire application we can add that in angular.json file</p>
+        </li>
+        <li>
+            <p>We have to add the stylesheets if any required we need to import in <code>src/styles.scss: @import here any css or scss file</code></p>
+            <p>Add the paths to the angular.json file, in the "apps" section like follows</p>
+        </li>
+        <li>
+            <blockquote>
+                <pre>
+                    "styles": [
+                        "../node_modules/some-package/some-package.css",
+                        "styles.scss"
+                    ],
+                    "scripts": [
+                        "../node_modules/some-package/some-package.js",
+                        "vendor.ts"
+                    ],
+                </pre>
+            </blockquote>
+        </li>
+    </ul>
+    <h3>Local</h3>
+    <ul>
+        <li>
+            <p>To use a package within a component, but not globally then we can directly import into that component itself.</p>
+        </li>
+        <li>
+            <p>To use the styles alone, we can import the somename.component.scss and @import the styles from node_modules.</p>
+        </li>
+        <li>
+            <p>To use the scripts, we can use the es6 import syntax.</p>
+            <p>The import paths are always relatvie to the file where the import is declared.</p>
+        </li>
+    </ul>
+    </div>
+    <div>
+        <h2>Note about jQuery</h2>
+        <p>In this anglar theme we try to use the angular application as much as possible. In future on application development if need to use the jQuery, import using the following command.</p>
+        <p><code>declare var $: any;</code></p>
+    </div>
+    <div>
+        <h2>Translation</h2>
+        <p>Angular 2+ supports multi language over the entire application for global use. We use i18n package module for the translation, here we use the Spanish and English translation. You can find that in right sidebar settings.</p>
+        <p>This feature has been implemented and maintained by the TranslationService which is located in the following path <code>./src/app/code/translator/translator.service.ts</code></p>
+        <p>This module simplifies the multiple language translation and the JSON and replacing the content based on the selected language.</p>
+        <p>Some examples of the translation module given below,</p>
+        <blockquote>
+            <code>
+                <span *ngIf="menu.heading">{{(menu.translate | translate) || menu.text | uppercase }}</span>
+            </code>
+        </blockquote>
+        <blockquote>
+            <code>
+                <span class="user-name">{{'sidebar.WELCOME' | translate }} John</span>
+            </code>
+        </blockquote>
+    </div>
+    <div>
+        <h2>Themes</h2>
+        <p>In Anglar theme we incorporates four light color themes and four dark color themes which are dynamically chosen by the user at the time of application running itself. Following are the available theme scss sheets.</p>
+        <p>To change or view the themes, we can find the files in the following path. <code>./src/app/shared/styles/themes</code></p>
+        <blockquote>
+            <p>themeOne.scss</p>
+            <p>themeTwo.scss</p>
+            <p>themeThree.scss</p>
+            <p>themeFour.scss</p>
+            <p>themeFive.scss</p>
+            <p>themeSix.scss</p>
+            <p>themeSeven.scss</p>
+            <p>themeEight.scss</p>
+            <p>themeRTL.scss</p>
+        </blockquote>
+        <p>The themes are managed by the separate service ThemeService.ts in following location. <code>./src/app/code/themes/themes.service.ts</code></p>
+        <p>When we change the theme in the settings, it adds a new style tag in the head tag of the application. And inside that tag we injects styles for the new theme everytime.</p>
+    </div>
+</body>
+</html>
+

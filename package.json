@@ -1,0 +1,29 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "Anglar Theme Documentation",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santhoshitguy/Documentation.git"
+  },
+  "keywords": [
+    "Documentation",
+    "angular",
+    "admin",
+    "theme"
+  ],
+  "author": "SquareBootstrap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santhoshitguy/Documentation/issues"
+  },
+  "homepage": "https://github.com/santhoshitguy/Documentation#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.1.3"
+  }
+}

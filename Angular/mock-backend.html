@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglar Admin Template Documentation</title>
+</head>
+<body>
+    <h1>Mock Back-end</h1>
+    <div>
+        <h2>Overview</h2>
+        <p>Anglar theme uses the mock backend which uses in memory web api to replicate the real server API like response to make easy the real server connectivity while developing the application.</p>
+        <p>To use this technology, we need <code>Http</code> and <code>HttpInterceptor, HTTP_INTERCEPTORS</code> to interpret particular API calls and generate the response from Frontend itself.</p>
+        <h3>How switching to the Real REST API</h3>
+        <p>This fake backend you can locate in the following path <code>./src/app/core/helpers/fake-backend.ts</code></p>
+        <p>When starts to gain control of the real APIs then we have to create a new service which can communicates with the real server and need to transfer all our calls to that service.</p>
+        <p>Before make ready the built for deploy in server, we need to change api endpoint in the environments file.</p>
+        <p>For example, consider the following services:</p>
+        <blockquote>
+            <p>Hide or delete the file path which points to the fake backend server.</p>
+            <pre>
+                // export { AuthHTTPService } from './auth-fake-http.service';
+            </pre>
+        </blockquote>
+        <blockquote>
+            <p>And then import the newly created service which points to the real server endpoint.</p>
+            <pre>
+                export { AuthHTTPService } from './auth-http.service';
+            </pre>
+        </blockquote>
+    </div>
+    
+</body>
+</html>
+
