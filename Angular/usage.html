@@ -11,7 +11,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="sidebar-heading border-bottom bg-info text-white">Square Bootstrap</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="index.html">Overview</a>
@@ -19,7 +19,7 @@
                     href="skeleton.html">Skeleton</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="installation.html">Installation</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="usage.html">Usage</a>
+                <a class="list-group-item list-group-item-action list-group-item-light active p-3" href="usage.html">Usage</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="mock-backend.html">Fake Backend</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="build.html">Build</a>
@@ -30,27 +30,11 @@
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info border-bottom">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Action</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Something else here</a>
-                                </div>
-                            </li>
+                            <li class="nav-item active"><a class="nav-link text-white" href="#!">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,9 +43,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xl-12 col-md-12 col-sm-12">
-                        <h1>Usage</h1>
+                        <h1 class="display-4">Usage</h1>
                         <div>
-                        <h2>Add new Components</h2>
+                        <h2 class="display-6">Add new Components</h2>
                             <p>To efficiently use the theme, you can create a new component by using the following way.</p>
                             <ul>
                                 <li>
@@ -75,7 +59,7 @@
                                 <li>In the latest version of angular, the component will be imported by default in a corresponding module. You can check it manually, if it is not then we can add by ourself. Otherwise the component won't usable.</li>
                                 <li>
                                     <blockquote>
-                                    <pre>import { SomeComponent } from './name/name.component';
+                                    <code>import { SomeComponent } from './name/name.component';
                                         @NgModule({
                                             imports: [ ... ],
                                             declarations: [
@@ -84,14 +68,14 @@
                                             exports: [
                                                 SomeComponent
                                             ]
-                                        })</pre>
+                                        })</code>
                                     </blockquote>
                                 </li>
                                 <li>The same type of commands can be used for create customized directives, modules, pipes and etc.</li>
                             </ul>
                         </div>
                         <div>
-                        <h2>Adding new routes</h2>
+                        <h2 class="display-6">Adding new routes</h2>
                             <p>When we develop the application we need to create a new route to navigate to a specific page. Follow the below steps to make it easier,</p>
                             <ul>
                                 
@@ -101,7 +85,7 @@
                                 </li>
                                 <li>
                                     <blockquote>
-                                        <pre>
+                                        <code>
                                             export const routes = [
                                                 // Routes loaded with complete layout like header, sidebar and footer etc.
                                                 {
@@ -119,13 +103,13 @@
                                                     ...
                                                 }
                                             ]
-                                        </pre>
+                                            </code>
                                     </blockquote>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                        <h2>Menu</h2>
+                        <h2 class="display-4">Menu</h2>
                             <ul>
                                 <li>
                                     <p>After create a new component or module as explained in the above block, now its time to add the route in the menu.</p>
@@ -137,7 +121,7 @@
                                 <li>
                                     <p>There we can find all the available menus which are currently displayed in the left side menu. We can create our own custom menu there as copy and paste menu block</p>
                                     <blockquote>
-                                        <pre>
+                                        <code>
                                             const NewMenu: MenuDetails = {
                                                 text: 'NewMenu',
                                                 link: '/new-menu',
@@ -151,7 +135,7 @@
                                                     },
                                                 ]
                                             };
-                                        </pre>
+                                        </code>
                                     </blockquote>
                                 </li>
                             </ul>
@@ -183,7 +167,7 @@
                             </li>
                             <li>
                                 <blockquote>
-                                    <pre>
+                                    <code>
                                         "styles": [
                                             "../node_modules/some-package/some-package.css",
                                             "styles.scss"
@@ -192,11 +176,11 @@
                                             "../node_modules/some-package/some-package.js",
                                             "vendor.ts"
                                         ],
-                                    </pre>
+                                    </code>
                                 </blockquote>
                             </li>
                         </ul>
-                        <h3>Local</h3>
+                        <h3 class="display-6">Local</h3>
                         <ul>
                             <li>
                                 <p>To use a package within a component, but not globally then we can directly import into that component itself.</p>

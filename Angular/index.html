@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/customCSS.css" />
     <title>Anglar Admin Template Documentation</title>
 </head>
 
@@ -13,9 +14,9 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="sidebar-heading bg-info text-white">Square Bootstrap</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                <a class="list-group-item list-group-item-action list-group-item-light active p-3"
                     href="index.html">Overview</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="skeleton.html">Skeleton</a>
@@ -32,311 +33,466 @@
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info text-white">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Action</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Something else here</a>
-                                </div>
-                            </li>
+                            <li class="nav-item active text-white"><a class="nav-link text-white" href="#!">Home</a></td>
+                            </tr>
+                            <li class="nav-item"><a class="nav-link text-white" href="#!">Link</a></td>
+                            </tr>
                         </ul>
                     </div>
                 </div>
             </nav>
             <!-- Page content-->
+            <div class="jumbotron text-center text-white">
+                  <h1 class="display-4 text-danger">Angular Documentation</h1>
+              </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xl-12 col-md-12 col-sm-12">
-                        <h1>Anglar Documentation</h1>
-                        <h2>Overview</h2>
+                        <h2 class="display-6">Overview</h2>
                         <p>Angular is a most popular and fast growing single page application front-end JavaScript
                             framework. This Anglar theme is build on top fo the latest Angular Front-end Javascript
                             framework and the latest Bootstrap. This theme not only a Admin Template to start your Saas
                             Application or enterprise application and also good platform to start learn the angular from
                             basics to an expert level by using the comments on each component and modules.</p>
-                        <h2>Angular File Structure</h2>
+                        <h2 class="display-6">Angular File Structure</h2>
                         <p>Anglar theme is well structured in both design as well in code. It is completely designed and
                             developed at the developers in preference. It has all things need to develop and kick start
                             the
                             application in a very less time with efficient code and reusability.</p>
-                        <ul>
-                            <li>dist - <span>The dist folder contains the deployable files in the server which means
-                                    compiled files of the entire application. To generate this Run the command
-                                    <code>ng build --prod</code> or <code>npm run build --prod</code></span></li>
-                            <li>e2e - <span>It contains the end to end testing related files which are generate using
-                                    Protector. Visit link <a
-                                        href="https://angular.io/cli/e2e">https://angular.io/cli/e2e</a> for more
-                                    info.</span></li>
-                            <li>node_modules - <span>The node_modules contains all the packages used to run the
-                                    application
-                                    or the theme. <code>package.json</code> is the file which maintain all the packages
-                                    used. Run the following command <code>npm install</code></span></li>
-                            <li>src - <span>The entire application lives in the src folder only. All custom angular
-                                    components, directives, pipes and modules are generated and communicated in this
-                                    location only. Anyother files are outside consider to be supporting the application
-                                    or
-                                    theme.</span>
-                                <ul>
-                                    <li>
-                                        <p>app - <span>Main application folder. Root for all other components or
-                                                modules</span></p>
-                                        <ul>
-                                            <li>
-                                                <p>core - <span>Contains all core functionalities of the
-                                                        application</span>
-                                                </p>
-                                                <ul>
-                                                    <li>directives - <span>Contains all customized directives to use
-                                                            overall
-                                                            theme or application</span></li>
-                                                    <li>guards - <span>Guards to protect the users or malicious threats
-                                                            to
-                                                            access the specific component or modules.</span></li>
-                                                    <li>helpers - <span>Contains the fake backend, jwt-interceptor and
-                                                            error
-                                                            interceptors which are supports to mock the fake database
-                                                            access.</span></li>
-                                                    <li>menu - <span>Menu service which helps to render the left side
-                                                            menu
-                                                            list dynamically.</span></li>
-                                                    <li>preloader - <span>Preloader service used for make ready the
-                                                            Preloader component at the time of logging in or loading
-                                                            other
-                                                            pages.</span></li>
-                                                    <li>services - <span>Lists all of the customized services for
-                                                            different
-                                                            purposes.</span></li>
-                                                    <li>theme-settings - <span>Theme settings like layout and
-                                                            etc.</span>
-                                                    </li>
-                                                    <li>themes - <span>Color theme settings like change the colors of
-                                                            the
-                                                            theme or application.</span></li>
-                                                    <li>translator - <span>Translator service helps to handle the
-                                                            language
-                                                            settings over the application.</span> </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p>layout - <span>Layout folder is contains all different parts of the
-                                                        application or theme.</span></p>
-                                                <ul>
-                                                    <li>header - <span>It shows the main header of the application and
-                                                            icons
-                                                            like settings and notifications etc.</span></li>
-                                                    <li>secondary-header - <span>Contains the page title as well some
-                                                            additional description about that component</span> </li>
-                                                    <li>sidebar - <span>Main sidebar component of the application or
-                                                            theme
-                                                            which contains the all menu list.</span></li>
-                                                    <li>offsidebar - <span>Offsidebar contains the theme options, layout
-                                                            settings and some other additional information about the
-                                                            theme
-                                                            or application.</span> </li>
-                                                    <li>footer - <span>Global footer component</span></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p>routes - <span>This module contains all custom components which are
-                                                        separate routes of the application.</span></p>
-                                                <ul>
-                                                    <li>apps - <span>Some of the pre-built applications like mailbox,
-                                                            and
-                                                            todo list.</span></li>
-                                                    <li>blog - <span>Blog module has all the components related to a
-                                                            blogging application or website.</span> </li>
-                                                    <li>charts - <span>Chart module lists all different kind charts for
-                                                            various purposes.</span></li>
-                                                    <li>dashboard - <span>Contains all available dashboard pages for
-                                                            various
-                                                            categories.</span></li>
-                                                    <li>ecommerce - <span>E-Commerce module lists all components needed
-                                                            for
-                                                            an e-commerce application</span></li>
-                                                    <li>elements - <span>Elements module carries all global elements
-                                                            like
-                                                            buttons, badges, cards, grids, pagination and etc.</span>
-                                                    </li>
-                                                    <li>events - <span>Event module has all the components to make
-                                                            events
-                                                            conducting application.</span></li>
-                                                    <li>forms - <span>In angular we can deal with all kind of form
-                                                            related
-                                                            functionalities. Forms module contains advanced, basics,
-                                                            template-driven, reactive form components.</span></li>
-                                                    <li>gallery - <span>Gallery for showcase the images albums.</span>
-                                                    </li>
-                                                    <li>home - <span>Home module has the main home screen
-                                                            component</span>
-                                                    </li>
-                                                    <li>maps - <span>Maps module helps to list different kind of maps
-                                                            like
-                                                            google maps.</span></li>
-                                                    <li>metrics - <span>List some metrics related components</span></li>
-                                                    <li>miscellaneous - <span>Miscellaneous module holds a lot of
-                                                            components
-                                                            which are not mandatory but required in most of the
-                                                            applications
-                                                            like, Clipboard, code-editor, idle-timer, pdf-viewer and
-                                                            more.</span></li>
-                                                    <li>ngrx - <span>Module based on the Ngrx store concept.</span></li>
-                                                    <li>pages - <span>Some common pages like 404, 500, login, lock and
-                                                            etc.</span></li>
-                                                    <li>pipes - <span>Lists some custom pipes</span></li>
-                                                    <li>tables - <span>Different types of tables</span></li>
-                                                    <li>views - <span>List of views for various purposes.</span></li>
-                                                    <li>widgets - <span>List of widgets used over the application or
-                                                            theme.</span></li>
-                                                    <li>menu.ts - <span>Contains all menu with its icons.</span></li>
-                                                    <li>routes.ts - <span>List of components that are available in the
-                                                            routes module.</span></li>
-                                                    <li>routes.module.ts - <span>Routes routing module.</span></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p>shared - <span>Shared module amoung the entire application.</span>
-                                                </p>
-                                                <ul>
-                                                    <li>custom-pipes - <span>List of customized pipes.</span></li>
-                                                    <li>colors - <span>Colors variables used in the application.</span>
-                                                    </li>
-                                                    <li>models - <span>List of models used in application.</span></li>
-                                                    <li>styles - <span>Set of stylesheets used for various components
-                                                            and
-                                                            different color themes.</span></li>
-                                                    <li>utils - <span>This module contains the list utilities for the
-                                                            application.</span></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p>app.component.html - <span>The root component of the theme or
-                                                        application.</span></p>
-                                            </li>
-                                            <li>
-                                                <p>app.component.ts - <span>Class of the root component.</span></p>
-                                            </li>
-                                            <li>
-                                                <p>app.component.scss - <span>Styles of the root component.</span></p>
-                                            </li>
-                                            <li>
-                                                <p>app.module.ts - <span>Root module of the application or theme. The
-                                                        place
-                                                        where we need to import all required modules and
-                                                        components.</span>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <p>assets - <span>Contains the core assets which are required for the Anglar
-                                                application.</span></p>
-                                    </li>
-                                    <li>
-                                        <p>environments - <span>It has multiple files every file points an individual
-                                                environment. Each export has simple variables for the
-                                                configuration.</span>
-                                        </p>
-                                        <ul>
-                                            <li>environment.prod.ts - <span>Configuration for Production
-                                                    environment.</span>
-                                            </li>
-                                            <li>environment.ts - <span>Configuration for Development environment.</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <p>favicon.ico - <span>Represents the application or theme icon.</span></p>
-                                    </li>
-                                    <li>
-                                        <p>index.html - <span>Each and every angular application has one
+                        <div class="table-responsive">
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th width="25%">Folder Name</th>
+                                        <th width="75%">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>dist</td>
+                                        <td><span>The dist folder contains the deployable files in the server which means
+                                        compiled files of the entire application. To generate this Run the command <code>ng build --prod</code> or <code>npm run build --prod</code></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>e2e</td>
+                                        <td><span>It contains the end to end testing related files which are generate using
+                                            Protector. Visit link <a
+                                                href="https://angular.io/cli/e2e">https://angular.io/cli/e2e</a> for more
+                                            info.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>node_modules</td>
+                                        <td><span>The node_modules contains all the packages used to run the
+                                            application
+                                            or the theme. <code>package.json</code> is the file which maintain all the packages
+                                            used. Run the following command <code>npm install</code></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>src</td>
+                                        <td><span>The entire application lives in the src folder only. All custom angular
+                                            components, directives, pipes and modules are generated and communicated in this
+                                            location only. Anyother files are outside consider to be supporting the application
+                                            or theme.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-1">- app</td>
+                                        <td><span>Main application folder. Root for all other components or modules</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- app.component.html</td>
+                                        <td><span>The root component of the theme or
+                                                application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- app.component.ts</td>
+                                        <td><span>Class of the root component.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- app.component.scss</td>
+                                        <td><span>Styles of the root component.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- app.module.ts</td>
+                                        <td><span>Root module of the application or theme. The
+                                                place
+                                                where we need to import all required modules and
+                                                components.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- core</td>
+                                        <td><span>Contains all core functionalities of the
+                                                application</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- directives</td>
+                                        <td><span>Contains all customized directives to use overall theme or application</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- guards</td>
+                                        <td><span>Guards to protect the users or malicious threats
+                                            to
+                                            access the specific component or modules.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- helpers</td>
+                                        <td><span>Contains the fake backend, jwt-interceptor and
+                                            error
+                                            interceptors which are supports to mock the fake database
+                                            access.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- menu</td>
+                                        <td><span>Menu service which helps to render the left side menu list dynamically.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- preloader</td>
+                                        <td><span>Preloader service used for make ready the Preloader component at the time of logging in or loading other pages.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- services</td>
+                                        <td><span>Lists all of the customized services for
+                                            different
+                                            purposes.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- theme-settings</td>
+                                        <td><span>Theme settings like layout and
+                                            etc.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- themes</td>
+                                        <td><span>Color theme settings like change the colors of
+                                            the
+                                            theme or application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- translator</td>
+                                        <td><span>Translator service helps to handle the
+                                            language
+                                            settings over the application.</span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- layout</td>
+                                        <td><span>Layout folder is contains all different parts of the application or theme.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- header</td>
+                                        <td><span>It shows the main header of the application and
+                                            icons
+                                            like settings and notifications etc.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- secondary-header</td>
+                                        <td><span>Contains the page title as well some
+                                            additional description about that component</span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- sidebar</td>
+                                        <td><span>Main sidebar component of the application or
+                                            theme
+                                            which contains the all menu list.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- offsidebar</td>
+                                        <td><span>Offsidebar contains the theme options, layout
+                                            settings and some other additional information about the
+                                            theme
+                                            or application.</span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- footer</td>
+                                        <td><span>Global footer component</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- routes</td>
+                                            <td><span>This module contains all custom components which are
+                                                separate routes of the application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- apps</td>
+                                        <td><span>Some of the pre-built applications like mailbox,
+                                            and
+                                            todo list.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- blog</td>
+                                        <td><span>Blog module has all the components related to a
+                                            blogging application or website.</span> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- charts</td>
+                                        <td><span>Chart module lists all different kind charts for
+                                            various purposes.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- dashboard</td>
+                                        <td><span>Contains all available dashboard pages for
+                                            various
+                                            categories.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- ecommerce</td>
+                                        <td><span>E-Commerce module lists all components needed
+                                            for
+                                            an e-commerce application</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- elements</td>
+                                        <td><span>Elements module carries all global elements
+                                            like
+                                            buttons, badges, cards, grids, pagination and etc.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- events</td>
+                                        <td><span>Event module has all the components to make
+                                            events
+                                            conducting application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- forms</td>
+                                        <td><span>In angular we can deal with all kind of form
+                                            related
+                                            functionalities. Forms module contains advanced, basics,
+                                            template-driven, reactive form components.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- gallery</td>
+                                        <td><span>Gallery for showcase the images albums.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- home</td>
+                                        <td><span>Home module has the main home screen
+                                            component</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- maps</td>
+                                        <td><span>Maps module helps to list different kind of maps
+                                            like
+                                            google maps.</span></td>
+                                        </tr>
+                                    <tr>
+                                        <td class="indent-3">--- metrics</td>
+                                        <td><span>List some metrics related components</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- miscellaneous</td>
+                                        <td><span>Miscellaneous module holds a lot of
+                                            components
+                                            which are not mandatory but required in most of the
+                                            applications
+                                            like, Clipboard, code-editor, idle-timer, pdf-viewer and
+                                            more.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- ngrx</td>
+                                        <td><span>Module based on the Ngrx store concept.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- pages</td>
+                                        <td><span>Some common pages like 404, 500, login, lock and
+                                            etc.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- pipes</td>
+                                        <td><span>Lists some custom pipes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- tables</td>
+                                        <td><span>Different types of tables</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- views</td>
+                                        <td><span>List of views for various purposes.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- widgets</td>
+                                        <td><span>List of widgets used over the application or
+                                            theme.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- menu.ts</td>
+                                        <td><span>Contains all menu with its icons.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- routes.ts</td>
+                                        <td><span>List of components that are available in the
+                                            routes module.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- routes.module.ts</td>
+                                        <td><span>Routes routing module.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- shared</td>
+                                        <td><span>Shared module amoung the entire application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- custom-pipes</td>
+                                        <td><span>List of customized pipes.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- colors</td>
+                                        <td><span>Colors variables used in the application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- models</td>
+                                        <td><span>List of models used in application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- styles</td>
+                                        <td><span>Set of stylesheets used for various components
+                                            and
+                                            different color themes.</span></td>
+                                        </tr>
+                                    <tr>
+                                        <td class="indent-3">--- utils</td>
+                                        <td><span>This module contains the list utilities for the
+                                            application.</span></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="indent-2">-- assets</td>
+                                        <td><span>Contains the core assets which are required for the Anglar
+                                                application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- environments</td>
+                                        <td><span>It has multiple files every file points an individual
+                                                    environment. Each export has simple variables for the
+                                                    configuration.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- environment.prod.ts</td>
+                                        <td><span>Configuration for Production
+                                            environment.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-3">--- environment.ts</td>
+                                        <td><span>Configuration for Development environment.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- favicon.ico</td>
+                                        <td><span>Represents the application or theme icon.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- index.html</td>
+                                        <td><span>Each and every angular application has one
                                                 <code>index.html</code> which is the root of the application or theme.
                                                 It
-                                                primarily taking care of all libraries, components and modules.</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>main.ts - <span>The main entry point of any angular application or
-                                                theme.</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>polyfills.ts - <span>Polyfills in angular are few lines of code which make
+                                                primarily taking care of all libraries, components and modules.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- main.ts</td>
+                                            <td><span>The main entry point of any angular application or
+                                                theme.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- polyfills.ts</td>
+                                            <td><span>Polyfills in angular are few lines of code which make
                                                 your
                                                 application compatible for different browsers. Polyfills.ts was provided
                                                 by
                                                 angular to help you do away with need to specifically setup
-                                                everything.</span></p>
-                                    </li>
-                                    <li>
-                                        <p>styles.scss - <span>Global styles go here which styles that affect all of
-                                                your
-                                                app need to be in a central place.</span></p>
-                                    </li>
-                                    <li>
-                                        <p>test.ts - <span>It's a place where the unit testing starts.</span></p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>.browserslistrc - <span>This file is used by the build system to adjust CSS and JS
-                                    output to
-                                    support the specified browsers.</span></li>
-                            <li>.editorconfig - <span>Contains the editor configurations.</span></li>
-                            <li>.gitignore - <span>This file used to exculde which are the files or folders not needs to
-                                    be
-                                    commit in the repository.</span></li>
-                            <li>angular.json - <span>Configuration for Angular CLI. In this file you can set several
-                                    defaults and also configure what files are included when your project is built.
-                                    Check
-                                    out the official documentation if you want to know more.</span></li>
-                            <li>karma.conf.js - <span>The karma.conf.js file is a partial Karma configuration file. The
-                                    CLI
-                                    constructs the full runtime configuration in memory, based on application structure
-                                    specified in the angular.json file, supplemented by karma.conf.js</span></li>
-                            <li>package-lock.json - <span>package-lock.json is automatically generated for any
-                                    operations
-                                    where npm modifies either the node_modules tree, or package.json</span></li>
-                            <li>package.json - <span>This file has meta details about the entire application. It mainly
-                                    contains the libraries and its exact versions list which are used in the
-                                    application.</span></li>
-                            <li>README.md - <span>The README file used to display the general information about the
-                                    theme,
-                                    like Name, version and some author details.</span></li>
-                            <li>tsconfig.app.json - <span>Visit link
-                                    https://www.typescriptlang.org/docs/handbook/tsconfig-json.html for more
-                                    info.</span>
-                            </li>
-                            <li>tsconfig.base.json - <span>Visit link
-                                    https://www.typescriptlang.org/docs/handbook/tsconfig-json.html for more
-                                    info.</span>
-                            </li>
-                            <li>tsconfig.json - <span>tsconfig.json is a file which tells the compiler about the root
-                                    files
-                                    structure.</span></li>
-                            <li>tsconfig.spec.json - <span>It is TypeScript configuration for the application
-                                    tests.</span>
-                            </li>
-                            <li>tslint.json - <span>Linting configuration for TSLint together with Codelyzer, used when
-                                    running ng lint. Linting helps keep your code style consistent.</span></li>
-                        </ul>
+                                                everything.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- styles.scss</td>
+                                        <td><span>Global styles go here which styles that affect all of
+                                                your app need to be in a central place.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="indent-2">-- test.ts</td>
+                                        <td><span>It's a place where the unit testing starts.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>.browserslistrc</td>
+                                        <td><span>This file is used by the build system to adjust CSS and JS
+                                            output to
+                                            support the specified browsers.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>.editorconfig</td>
+                                        <td><span>Contains the editor configurations.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>.gitignore</td>
+                                        <td><span>This file used to exculde which are the files or folders not needs to
+                                            be
+                                            commit in the repository.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>angular.json</td>
+                                        <td><span>Configuration for Angular CLI. In this file you can set several
+                                            defaults and also configure what files are included when your project is built.
+                                            Check
+                                            out the official documentation if you want to know more.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>karma.conf.js</td>
+                                        <td><span>The karma.conf.js file is a partial Karma configuration file. The
+                                            CLI
+                                            constructs the full runtime configuration in memory, based on application structure
+                                            specified in the angular.json file, supplemented by karma.conf.js</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>package-lock.json</td>
+                                        <td><span>package-lock.json is automatically generated for any
+                                            operations
+                                            where npm modifies either the node_modules tree, or package.json</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>package.json</td>
+                                        <td><span>This file has meta details about the entire application. It mainly
+                                            contains the libraries and its exact versions list which are used in the
+                                            application.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>README.md</td>
+                                        <td><span>The README file used to display the general information about the
+                                            theme,
+                                            like Name, version and some author details.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>tsconfig.app.json</td>
+                                        <td><span>Visit link
+                                            https://www.typescriptlang.org/docs/handbook/tsconfig-json.html for more
+                                            info.</span></td>
+                                    </tr>
+                                <tr>
+                                    <td>tsconfig.base.json</td>
+                                    <td><span>Visit link
+                                        https://www.typescriptlang.org/docs/handbook/tsconfig-json.html for more
+                                        info.</span></td>
+                                </tr>
+                                <tr>
+                                    <td>tsconfig.json</td>
+                                    <td><span>tsconfig.json is a file which tells the compiler about the root
+                                        files
+                                        structure.</span></td>
+                                </tr>
+                                <tr>
+                                    <td>tsconfig.spec.json</td>
+                                    <td><span>It is TypeScript configuration for the application
+                                        tests.</span></td>
+                                </tr>
+                                <tr>
+                                    <td>tslint.json</td>
+                                    <td><span>Linting configuration for TSLint together with Codelyzer, used when
+                                        running ng lint. Linting helps keep your code style consistent.</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>

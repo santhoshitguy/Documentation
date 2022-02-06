@@ -11,7 +11,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="sidebar-heading border-bottom bg-info text-white">Square Bootstrap</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="index.html">Overview</a>
@@ -23,34 +23,19 @@
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="mock-backend.html">Fake Backend</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="build.html">Build</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                <a class="list-group-item list-group-item-action list-group-item-light active p-3"
                     href="deployment.html">Deployment</a>
             </div>
         </div>
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info border-bottom">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Action</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Something else here</a>
-                                </div>
-                            </li>
+                            <li class="nav-item active"><a class="nav-link text-white" href="#!">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#!">Link</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,37 +44,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xl-12 col-md-12 col-sm-12">
-                        <h1>Deployment</h1>
+                        <h1 class="display-4">Deployment</h1>
                         <div>
-                            <h2>Angular for Production</h2>
+                            <h2 class="display-6">Angular for Production</h2>
                             <p>After completing the development, we need to deploy the application to the end user test. For that Angular cli have some inbuilt commands to generate the dist for deployment. The Ahead-of-Time(AOT) which helps to load pre-compiled templates on the page loading time. It'll catch all errors while compile, so we can increase the performance.</p>
                             <p>The AOT compilation, downloads pre-compiled version of the application. So the user can reach out to any page or perform any logic immediately without any delay.</p>
                             <blockquote>
-                                <pre>
                                     <code>ng build --prod</code>
-                                </pre>
                             </blockquote>
                             <p>We need to copy the files into a server sub-domain, and need to attch the build flag, --base-href and add attribute <base href> appropriately. For example, if the index.html is on the server at /demo/demo1/index.html, set the base href to <base href="/demo/demo1/"> like this.</p>
                             <blockquote>
-                                <pre>
                                     <code><base href="/demo/demo1/"></code>
-                                </pre>
                             </blockquote>
                             <p>Another way of setting the --base-href is using the build command</p>
                             <blockquote>
-                                <pre>
-                                    <code>ng build --prod --base-href="/my/app/"</code>
-                                </pre>
+                                <code>ng build --prod --base-href="/my/app/"</code>
                             </blockquote>
                             <p>For more detailed information, visit this official Angular <a href="https://angular.io/guide/deployment">documentation website</a>.</p>
                         </div>
                         <div>
-                            <h2>Ahead-of-time (AOT) vs just-in-time (JIT)</h2>
+                            <h2 class="display-6">Ahead-of-time (AOT) vs just-in-time (JIT)</h2>
                             <p>Actually Angular has only one compiler. The major difference between these two approaches are timing and the set of tools used for it. Tha AOT is compiles once at the build time using set of libraries, and the other side the JIT is compiles every user reach out the particular page using another set of libraries. To enable the JIT compiler,</p>
                             <blockquote>
-                                <pre>
                                     <code>ng build --prod --aot=false</code>
-                                </pre>
                             </blockquote>
                         </div>
                     </div>

@@ -13,7 +13,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="sidebar-heading border-bottom bg-info text-white">Square Bootstrap</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="index.html">Overview</a>
@@ -24,7 +24,7 @@
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="usage.html">Usage</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="mock-backend.html">Fake Backend</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="build.html">Build</a>
+                <a class="list-group-item list-group-item-action list-group-item-light active p-3" href="build.html">Build</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="deployment.html">Deployment</a>
             </div>
@@ -32,35 +32,21 @@
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info border-bottom">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
+                    
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Action</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Something else here</a>
-                                </div>
-                            </li>
+                            <li class="nav-item active"><a class="nav-link text-white" href="#!">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#!">Link</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
             <!-- Page content-->
             <div class="container-fluid">
-                <h1>Build Tools</h1>
-                <h2>Installing Tools</h2>
+                <h1 class="display-4">Build Tools</h1>
+                <h2 class="display-6">Installing Tools</h2>
                 <ul>
                     <li>The following steps are required to setup and run the theme. If these steps are not enough then
                         do some research on how to start and run a application.</li>
@@ -88,7 +74,7 @@
                     <li>If your machine has the latest node and npm, then open your browser and browse
                         <code>http://localhost:4200</code></li>
                 </ul>
-                <h2>Building for Production</h2>
+                <h2 class="display-6">Building for Production</h2>
                 <div>
                     <p>After complete the development we need to deploy the application on the any server to make it
                         available for end user access.</p>

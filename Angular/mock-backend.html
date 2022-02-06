@@ -11,7 +11,7 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="sidebar-heading border-bottom bg-info text-white">Square Bootstrap</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="index.html">Overview</a>
@@ -20,7 +20,7 @@
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
                     href="installation.html">Installation</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="usage.html">Usage</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                <a class="list-group-item list-group-item-action list-group-item-light active p-3"
                     href="mock-backend.html">Fake Backend</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="build.html">Build</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
@@ -30,27 +30,11 @@
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info border-bottom">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Action</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Something else here</a>
-                                </div>
-                            </li>
+                            <li class="nav-item active"><a class="nav-link text-white" href="#!">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,27 +43,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xl-12 col-md-12 col-sm-12">
-                        <h1>Mock Back-end</h1>
+                        <h1 class="display-4">Mock Back-end</h1>
                         <div>
-                            <h2>Overview</h2>
+                            <h2 class="display-6">Overview</h2>
                             <p>Anglar theme uses the mock backend which uses in memory web api to replicate the real server API like response to make easy the real server connectivity while developing the application.</p>
                             <p>To use this technology, we need <code>Http</code> and <code>HttpInterceptor, HTTP_INTERCEPTORS</code> to interpret particular API calls and generate the response from Frontend itself.</p>
-                            <h3>How switching to the Real REST API</h3>
+                            <h3 class="display-6">How switching to the Real REST API</h3>
                             <p>This fake backend you can locate in the following path <code>./src/app/core/helpers/fake-backend.ts</code></p>
                             <p>When starts to gain control of the real APIs then we have to create a new service which can communicates with the real server and need to transfer all our calls to that service.</p>
                             <p>Before make ready the built for deploy in server, we need to change api endpoint in the environments file.</p>
                             <p>For example, consider the following services:</p>
                             <blockquote>
                                 <p>Hide or delete the file path which points to the fake backend server.</p>
-                                <pre>
-                                    // export { AuthHTTPService } from './auth-fake-http.service';
-                                </pre>
+                                <code>// export { AuthHTTPService } from './auth-fake-http.service';</code>
                             </blockquote>
                             <blockquote>
                                 <p>And then import the newly created service which points to the real server endpoint.</p>
-                                <pre>
-                                    export { AuthHTTPService } from './auth-http.service';
-                                </pre>
+                                <code>export { AuthHTTPService } from './auth-http.service';</code>
                             </blockquote>
                         </div>
                     </div>
