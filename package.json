@@ -24,6 +24,7 @@
   "homepage": "https://github.com/santhoshitguy/Documentation#readme",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "font-awesome": "^4.7.0"
   }
 }

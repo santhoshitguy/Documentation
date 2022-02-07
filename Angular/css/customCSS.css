@@ -8,3 +8,6 @@
 .indent-3 {
     padding-left: 90px !important;
 }
+.btn-primary {
+    border: none !important;
+}
