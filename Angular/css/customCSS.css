@@ -11,3 +11,8 @@
 .btn-primary {
     border: none !important;
 }
+
+.sidebar-heading.bg-info.text-white > a {
+    color: #fff;
+    text-decoration: none;
+}
